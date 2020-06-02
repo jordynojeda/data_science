@@ -10,7 +10,7 @@ import time
 import pandas as pd
 
 
-def get_jobs(keyword, num_jobs, verbose, path, slp_time):
+def get_jobs(keyword, num_jobs ,verbose, path, slp_time):
     '''Gathers jobs as a dataframe, scraped from Glassdoor'''
 
     # Initializing the webdriver
