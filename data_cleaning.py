@@ -26,7 +26,7 @@ df['max_salary'] = min_hr.apply(lambda x: int(x.split("-")[1]))  # Grabs the max
 df['average_salary'] = (df.min_salary + df.max_salary) / 2       # Finds the average of the two salaries
 
 # Company name text only
-df['comapny_text'] = df.apply(lambda x: x['Company Name'] if x['Rating'] < 0 else x['Company Name'][:-3], axis = 1) # Gets ride of the rating of the company and just has the name
+df['company_text'] = df.apply(lambda x: x['Company Name'] if x['Rating'] < 0 else x['Company Name'][:-3], axis = 1) # Gets ride of the rating of the company and just has the name
 
 # State field
 df['job_state'] = df['Location'].apply(lambda x: x.split(',')[1]) # Retrieves the state only (Excludes the city)
